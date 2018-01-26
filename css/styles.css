@@ -106,6 +106,22 @@ footer {
     overflow:hidden;
     }
 
+/*style gallery*/
+#addimage {
+    width:100vw;
+}
+.example-image {
+    width: 400px;
+    height: 400px;
+    border: 1px solid #000;
+    margin:0;
+    padding:0;
+}
+#addimage > h2 {
+    font-variant: small-caps;
+    font-size: 1.5em;
+    text-align: center;
+}
 
 /* START RESPONSIVE STYLES */
 

@@ -109,9 +109,10 @@ if ($uploadOk == 0) {
      <a class=\"example-image-link\" href=\"includes/uploads/" . $fname . "\" data-lightbox=\"example-set\" data-title=\"Click the right half of the image to move forward.\"><img class=\"example-image\" src=\"includes/uploads/" . $fname . "\" alt=\"testing\"/></a>
    </div><hr />";
         $f = 'gallerycontents.php';
-        $aString = file_put_contents($f, $txt , FILE_APPEND | LOCK_EX);
+        $aString = file_get_contents($f);
+        $anotherString = $aString . $txt;
         $thisHandle = fopen($f, "w");
-        fwrite($thisHandle, $aString);
+        fwrite($thisHandle, $anotherString);
         fclose($thisHandle);
 
 

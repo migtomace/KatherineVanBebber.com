@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/lightbox.min.css">
 </head>
 <body>
@@ -10,7 +11,7 @@
     <div id="gallery">
  <section id="addimage">
  
- <h2>CHECK OUT THE GOODS...</h2>
+ <h2>Gallery</h2>
  
  <?php include "includes/gallerycontents.php" ?>
     
