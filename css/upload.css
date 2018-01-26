@@ -1,0 +1,68 @@
+header {
+    width:100%;
+    height:200px;
+    font-variant: small-caps;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+iframe.gallery {
+    height:100vh;
+    width:80%;
+
+}
+/*styles side navigation*/
+
+aside.CMSnav > p {
+    display: block;
+    font-size:1.5em;
+    font-weight:bold;
+    color:rgb(255, 255, 255);
+    width: 100%;
+}
+aside.CMSnav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+aside.CMSnav > a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+aside.CMSnav > a:hover {
+    color: #f1f1f1;
+}
+
+aside.CMSnav > .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/*styles upload div*/
+div.upload {
+    float:right;
+    width:auto;
+    height:500px;
+    padding:2px;
+    margin: 10px 5px;
+}
+.upload > fieldset {
+    padding:5px;
+}
+
