@@ -30,14 +30,12 @@
     <script>
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("container").style.marginLeft = "250px";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+
 }
 
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("container").style.marginLeft = "0";
-    document.body.style.backgroundColor = "#fff";
+
 }
 </script>
 
@@ -110,8 +108,15 @@ if ($uploadOk == 0) {
         $txt = "<div id=\"uploads/". $fname . "\">
      <a class=\"example-image-link\" href=\"includes/uploads/" . $fname . "\" data-lightbox=\"example-set\" data-title=\"Click the right half of the image to move forward.\"><img class=\"example-image\" src=\"includes/uploads/" . $fname . "\" alt=\"testing\"/></a>
    </div><hr />";
-        $myfile = file_put_contents('gallerycontents.php', $txt , FILE_APPEND | LOCK_EX);
+        $f = 'gallerycontents.php';
+        $aString = file_put_contents($f, $txt , FILE_APPEND | LOCK_EX);
+        $thisHandle = fopen($f, "w");
+        fwrite($thisHandle, $aString);
+        fclose($thisHandle);
 
+
+
+        
     } else {
         
         echo "<script>document.getElementById(\"feedback\").innerHTML = \"Sorry, there was an error uploading your file.<br>\";</script>";
