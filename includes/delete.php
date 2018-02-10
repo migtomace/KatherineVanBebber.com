@@ -14,7 +14,7 @@ fclose($handle);
 
 
 
-$newString = str_replace($string, "Replacent SUCCESS!!!", $file);
+$newString = str_replace($string, "Replacement SUCCESS!!!", $file);
 $new_file = "newgallery.php";
 $new_handle = fopen($new_file, "w");
 fwrite($new_handle, $newString);

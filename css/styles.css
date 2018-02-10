@@ -1,10 +1,19 @@
 
-* {
+* , html, body, p, h5, h5, h4, h3, h2, h1, header, main, aside, span,
+footer, nav, ul, li, ol, div, img, section {
     margin:0;
     padding:0;
+    font: 100%;
+    color:#000;
 }
 html {
     background-color:#e6e6fa;
+}
+h1 {
+    font-size: 1.6em;
+}
+h2 {
+    font-size: 1.4em;
 }
 @font-face {
 font-family: 'TimeBurner';
@@ -26,10 +35,10 @@ p, section>h2 {
     background: #000;
 
 }
-heading {
+.title {
         /*font-family: 'Amatic SC', cursive;*/
     font-family: 'Mrs Sheppards', cursive;
-    font-size:4em;
+    font-size:3em;
     position:absolute;
     top:50px;
     left: 75px;
@@ -45,23 +54,10 @@ main {
     height: 700px;
 
 }
-.img1, .img2, .img3, .uka {
-    width:50%;
-    height:400px;
-    margin:0;
-    opacity:0.4;
-    display:inline-block;
-    float:left;
-}
 
 .div {
     width: 100%;
     height: 800px;
-}
-
-div.wrapper {
-    background-color:#fff;
-	overflow:auto;
 }
 
 h1>a {
@@ -99,7 +95,7 @@ footer {
 	clear:both;
     height:50px;
     line-height:1.5em; 
-    background:#000000;
+    background:#333;
     color:white;
     width:100vw;
     margin:0 auto;
@@ -107,7 +103,7 @@ footer {
     }
 
 /*style gallery*/
-#addimage {
+#gallery {
     width:100vw;
 }
 .example-image {
@@ -117,10 +113,14 @@ footer {
     margin:0;
     padding:0;
 }
-#addimage > h2 {
+#gallery > h2 {
     font-variant: small-caps;
     font-size: 1.5em;
     text-align: center;
+}
+#gallery {
+    margin: 0 auto;
+    width:80%;
 }
 
 /* START RESPONSIVE STYLES */
