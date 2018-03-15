@@ -61,7 +61,6 @@ if ($response != null && $response->success)
 
     <div class="cover"><img src="images/guitar.png" class="coverimage" alt="Katherine Van Bebber playing the guitar">
  <div class="contact">
- <div class="mobile">
    <form action="<?php echo basename($_SERVER['PHP_SELF']); ?>" method="post">
  <fieldset>
     <legend align="center">Contact Katherine</legend>
@@ -86,7 +85,6 @@ if ($response != null && $response->success)
 
 </fieldset>
 </form>
-     </div>
     </div>
 	<!-- END HTML FORM -->
 
