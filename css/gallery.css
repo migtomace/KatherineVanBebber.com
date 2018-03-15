@@ -1,0 +1,75 @@
+
+/*gallery styles*/
+
+.polaroid {
+  position: relative;
+  width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+ 
+.polaroid img {
+  border: 20px solid #fff;
+  border-bottom: 65px solid #fff;
+  -webkit-box-shadow: 3px 3px 3px #777;
+     -moz-box-shadow: 3px 3px 3px #777;
+          box-shadow: 3px 3px 3px #777;
+    flex: 1;
+    margin:10px 50px;
+}
+ 
+/*.polaroid p {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 0px;
+  font: 400 2em 'Sue Ellen Francisco', cursive;
+  color: #888;
+}*/
+
+/*style gallery*/
+.gallery-image {
+  height: 250px;
+  border: 1px solid #000;
+  margin:0;
+  padding:0;
+}
+#gallery > h2 {
+  font-variant: small-caps;
+    margin:1em;
+  font-size: 3em;
+  text-align: center;
+}
+#gallery {
+  margin: 0 auto;
+  width:80%;
+}
+
+
+/* START RESPONSIVE STYLES */
+
+/* DESKTOP */
+@media all and (min-width:1400px) {
+	
+
+}
+
+
+/* TABLET */
+@media all and (min-width:737px) and (max-width:1399px) {
+	
+
+}
+
+
+/* PHONE */
+@media all and (max-width:736px) {
+    #gallery {
+        width: 100%;
+        margin: 1em 0 0 0;
+    } 
+    .gallery-image {
+        margin: auto;
+        height: 200px;
+    }
+}

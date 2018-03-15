@@ -67,10 +67,10 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 if(isset($_POST["submit"])) {
     $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
     if($check !== false) {
-        echo "<script>document.getElementById(\"feedback\").innerHTML = \"File is an image - " . $check["mime"] . ".<br>\";</script>";
+        echo "<script>document.getElementById('feedback').innerHTML = 'File is an image - " . $check["mime"] . ".<br>';</script>";
         $uploadOk = 1;
     } else {
-        echo "<script>document.getElementById(\"feedback\").innerHTML = \"File is not an image.<br>\";</script>";
+        echo "<script>document.getElementById('feedback').innerHTML = 'File is not an image.<br>';</script>";
         $uploadOk = 0;
     }
 }
@@ -105,9 +105,7 @@ if ($uploadOk == 0) {
      
 
 
-        $txt = "<div id=\"uploads/". $fname . "\">
-     <a class=\"example-image-link\" href=\"includes/uploads/" . $fname . "\" data-lightbox=\"example-set\" data-title=\"Click the right half of the image to move forward.\"><img class=\"example-image\" src=\"includes/uploads/" . $fname . "\" alt=\"testing\"/></a>
-   </div><hr />";
+        $txt = "<a class='example-image-link' href='uploads/". $fname ."' data-lightbox='example-set' data-title='use arrows or press outside of image to escape'><img class='gallery-image' src='uploads/". $fname ."' alt='' /></a>";
         $f = 'gallerycontents.php';
         $aString = file_get_contents($f);
         $anotherString = $aString . $txt;

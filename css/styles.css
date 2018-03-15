@@ -3,8 +3,7 @@
 footer, nav, ul, li, ol, div, img, section {
     margin:0;
     padding:0;
-    font: 100%;
-    color:#000;
+    font-size: 100%;
 }
 html {
     background-color:#e6e6fa;
@@ -15,24 +14,48 @@ h1 {
 h2 {
     font-size: 1.4em;
 }
-@font-face {
-font-family: 'TimeBurner';
-src:url("fonts/timeburnernormal.ttf");
-}
-
 h2.pageID {
     text-align: center;
 }
-p, section>h2 {
+p, section > h2 {
     margin:10px;
 }
+#toTheTop {
+    font-family: 'Patrick Hand SC', cursive;
+    font-size: 2em;
+    color: #000;
+    text-align: center;
+    margin: 1em auto 3em;;
+}
+#toTheTop a {
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 25px;
+    padding: 0.5em 1em;
+    margin:1em;
+    font-variant: small-caps;
+}
+#toTheTop a:hover {
+    color: #5e557f;
+}
 .cover {
-    width: 100%;
-    height: 800px;
+    width: 100vw;
+    height: 100vh;
     overflow: hidden;
     margin:0;
     padding:0;
     background: #000;
+    z-index: 1;
+    position: absolute;
+
+}
+.container {
+    width: 100vw;
+    margin:0;
+    padding:0;
+    z-index: 1;
+    position: absolute;
 
 }
 .title {
@@ -47,12 +70,26 @@ p, section>h2 {
 }
 .coverimage {
     width: 100%;
+    z-index: 999;
 }
 
-main {
-    width: 100%;
-    height: 700px;
-
+#about {
+    width: 30vw;
+    height: 100%;
+    background: #e6e6fa;
+    position:absolute;
+    top:0;
+    right:0;
+    opacity:0.6;
+    padding: 2em;
+    font-family: 'Patrick Hand SC', cursive;
+    text-align: justify;
+    font-size: 1.4em;
+    z-index: 1;
+}
+#about > h3 {
+    text-decoration: underline;
+    font-size: 1.75em;
 }
 
 .div {
@@ -63,7 +100,6 @@ main {
 h1>a {
     text-decoration: none;
     color:#000;
-    font-family: 'TimeBurner';
 }
 
 .logo {
@@ -92,36 +128,27 @@ div.embed-container iframe {
 }
 
 footer {
-	clear:both;
-    height:50px;
+    height:3em;
     line-height:1.5em; 
     background:#333;
-    color:white;
+    color: #666;
     width:100vw;
     margin:0 auto;
     overflow:hidden;
-    }
-
-/*style gallery*/
-#gallery {
-    width:100vw;
-}
-.example-image {
-    width: 400px;
-    height: 400px;
-    border: 1px solid #000;
-    margin:0;
-    padding:0;
-}
-#gallery > h2 {
-    font-variant: small-caps;
-    font-size: 1.5em;
     text-align: center;
+    border-top:1px solid #000;
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    }
+footer a {
+    color: #666;
+    
 }
-#gallery {
-    margin: 0 auto;
-    width:80%;
+footer a:hover {
+    color: #5e557f;
 }
+
 
 /* START RESPONSIVE STYLES */
 
@@ -131,11 +158,6 @@ footer {
 	div.wrapper {
 		width:80%;
 		margin:auto;
-	}
-
-    section {
-		width:65%;
-		float:left;
 	}
 	
 	aside {	
@@ -166,10 +188,6 @@ footer {
 /* TABLET */
 @media all and (min-width:737px) and (max-width:1399px) {
 	
-	section {
-		width:60%;
-		float:left;
-	}
 	
 	aside {	
 		width:39%;
@@ -206,4 +224,26 @@ footer {
     img.tablet, img.desktop {
         display:none;
     }  
+    .coverimage {
+        display: none;
+    }
+    #about {
+        font-size: 1em;
+        position: static;
+        width: 100%;
+    }
+    .title {
+        position: static;
+        text-align: center;
+        font-size: 2em;
+        width: 100%;
+        background: #000;
+        color: #e6e6fa;
+    }
+    .cover, .container {
+        width: 100vw;
+    }
+    footer{
+        padding-bottom: 2em;
+    }
 }

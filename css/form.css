@@ -1,56 +1,154 @@
 /* start reCAPTCHA styles */
-		
-		/* writes to small text above reCAPTCHA upon failure */
-		
-        form>div {
-            margin:1em;
-        }
 
-        .dateFeedback{
-			font-style:italic;
-			font-size:70%;
-			font-weight:bold;
-			color:#f00;
-		}
+/* writes to small text above reCAPTCHA upon failure */
 
-        input:required {
-              border: 1px solid red;
-        }
 
-         input:optional, textarea:optional {
-             background-color:#f1f1f1;
-             border:1px solid #ccc;
-        }
 
-        input[type="submit"], input[type="button"], input[type="file"] {
-          background-color: #fff;
-          border-radius: 4px;
-          border: solid 1px #ccc;
-          padding: 0.3em 0.5em;
-            margin-bottom: 10px;
-        }
-        .contact {
-            position:absolute;
-            top:200px;
-            right:100px;
-            background: #e6e6fa;
-            margin:10px auto;
-            opacity: 0.6;
-        }
-
-        fieldset {
-          border: 1px solid #ccc;
-          max-width: 350px;
-            margin:10px;
-
-        }
-
-        legend {
-          margin-left: 0.5em;
-          padding: 0.2em 0.5em;
-            font-family: "Great Vibes", cursive;
-            font-size: 1.5em;
-
-        }
-        
         /* end reCAPTCHA styles */
+
+/* START RESPONSIVE STYLES */
+
+/* DESKTOP */
+@media all and (min-width:1400px) {
+
+    form>div {
+    margin:1em;
+}
+
+.dateFeedback{
+    font-style:italic;
+    font-size:70%;
+    font-weight:bold;
+    color:#f00;
+}
+
+
+.contact {
+    position: relative;
+    background: #e6e6fa;
+    margin:10px auto;
+    opacity: 0.6;
+    border-radius: 50%;
+    display: flex;
+    text-align: center;
+    font-family: "Great Vibes", cursive;
+    padding: 1em;
+    width: 500px;
+}
+label, input {
+    font-size: 1.5em;
+}
+
+input[type="submit"], input[type="button"], input[type="file"] {
+    padding: 0.3em 0.5em;
+}
+
+input:required {
+    border: 1px solid red;
+    padding: 0.5em;
+}
+
+input:optional, textarea:optional {
+    background-color:#f1f1f1;
+    border:1px solid #ccc;
+    padding: 0.5em;
+}
+
+input[type="submit"], input[type="button"], input[type="file"] {
+    background-color: #fff;
+    border-radius: 4px;
+    border: solid 1px #ccc;
+    padding: 0.3em 0.5em;
+    margin-bottom: 30px;
+}
+
+form {
+	position:absolute;
+	bottom:-4em;
+	right:-4em;
+    border: 1px solid #ccc;
+    margin:10px;
+    border-radius: 50%;
+    padding: 2em;
+    width: 50%;
+}
+
+legend {
+  padding: 0.2em 0.5em;
+    font-family: "Great Vibes", cursive;
+    font-size: 1.5em;
+    margin-left: 1em;
+}
+
+::placeholder {
+    color: red;
+    font-family: 'Patrick Hand SC', cursive;
+    font-size: 1em; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: red;
+    font-family: 'Patrick Hand SC', cursive;
+    font-size: 1em;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: red;
+    font-family: 'Patrick Hand SC', cursive;
+    font-size: 1em;
+}
+}
+
+
+/* TABLET */
+@media all and (min-width:737px) and (max-width:1399px) {
+
+
+}
+
+
+/* PHONE */
+@media all and (max-width:736px) {
+.contact {
+    width: 100%;
+    height: 100$;
+    position: static;
+    margin: 0 auto;
+    border-radius: 0;
+    background: url('../images/image2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+label {
+    font-size: 1em;
+}
+
+.mobile {
+    background: #e6e6fa;
+    opacity: 0.8;
+    }
+
+fieldset {
+    border: 0;
+    background: transparent;
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+}
+
+legend {
+    padding: 0.2em 0;
+    }
+input:required {
+    padding: 0.5em 0;
+}
+
+input:optional, textarea:optional {
+     padding: 0.5em 0;
+}
+
+input[type="submit"], input[type="button"], input[type="file"] {
+  padding: 0.3em 0.5em;
+}
+}

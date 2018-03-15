@@ -1,24 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/lightbox.min.css">
-</head>
-<body>
-    
+<?php include 'includes/top.php'?>
+ 
+    <div class="container">   
     <div id="gallery">
- <section id="addimage">
+
  
  <h2>Gallery</h2>
  
  <?php include "includes/gallerycontents.php" ?>
-    
-</section>
-<h2><a href="#top">TOP!</a></h2>
+
+
+
+</div>
+
+<h3 id="toTheTop"><a href="#top">To the top!</a></h2>
   <script src="js/lightbox-plus-jquery.min.js"></script>
+
 </div>
     
-</body>
-</html>
+<?php include 'includes/bottom.php'?>
